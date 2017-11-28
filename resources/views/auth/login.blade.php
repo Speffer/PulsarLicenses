@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
-@section('content')
+@section('css-content')
+    <link rel="stylesheet" href="../public/assets/css/base">
+@endsection
+
 @section('content')
     <div class="container">
         <h4 class="center">Login</h4>

@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+@yield('css-content')
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,16 +21,17 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-<div class="container">
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center">Pulsar Licenses</a>
-            <ul class="left hide-on-med-and-down">
-                <li><a href="{{ route('register') }}">Cadastro</a></li>
-                <li><a href="badges.html">PP link</a></li>
-            </ul>
-        </div>
-    </nav>
+<section>
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo center">Pulsar Licenses</a>
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="{{ route('register') }}">Cadastro</a></li>
+                    <li><a href="badges.html">PP link</a></li>
+                </ul>
+            </div>
+        </nav>
     @yield('content')
 
 
@@ -43,7 +45,8 @@
     {{--@endauth--}}
     {{--</div>--}}
     {{--@endif--}}
-</div>
+    </div>
+</section>
 </body>
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
