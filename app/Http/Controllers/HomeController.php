@@ -26,6 +26,7 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
     public function quitandodavida(){
         Auth::logout();
         return view('auth.login');

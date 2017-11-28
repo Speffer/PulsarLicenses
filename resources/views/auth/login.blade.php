@@ -46,13 +46,17 @@
                     {{ csrf_field() }}
                     <div class="row">
                         <div class="input-field col s12 m12 l12">
-                            <input type="email" id="email" name="email" class="validate {{ $errors->has('email') ? 'invalid' : '' }}">
-                            <label for="email" data-error="{{ $errors->has('email') ? $errors->first('email') : 'Digite um email válido!' }}" data-success="right">Email</label>
+                            <input type="email" placeholder="Email" id="email" name="email" class="validate {{ $errors->has('email') ? 'has-error' : 'error' }}">
+                            @if ($errors->has('email'))
+                                <strong>{{ $errors->first('email') }}</strong>
+                            @endif
                         </div>
 
                         <div class="input-field col s12 m12 l12">
-                            <input type="password" id="password" name="password" class="validate {{ $errors->has('password') ? 'invalid' : '' }}">
-                            <label for="password" data-error="{{ $errors->has('password') ? $errors->first('password') : 'A senha deve ter 6 caracteres seu boca de jundiá!' }}">Senha</label>
+                            <input type="password" placeholder="Senha" id="password" name="password" class="validate {{ $errors->has('password') ? 'has-error' : 'error' }}">
+                            @if ($errors->has('password'))
+                                <strong>{{ $errors->first('password') }}</strong>
+                            @endif
                         </div>
 
                         <div class="col s12 m12 l12">
