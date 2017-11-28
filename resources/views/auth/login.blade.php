@@ -36,6 +36,57 @@
         </div>
     </nav>
 
+    <div class="row right">
+        <div class="col s8 m8 l8 right">
+            <h4 class="center white-text">PulsarLicenses</h4>
+            <div class="divider"></div>
+
+            <div class="row">
+                <form action="{{ route('login')}}" method="POST" class="col s10 m10 l10">
+                    {{ csrf_field() }}
+                    <div class="row">
+                        <div class="input-field col s12 m12 l12 {{ $errors->has('email') ? 'has-error' : '' }} ">
+                            <input type="email" placeholder="Email" id="email" name="email" class="validate">
+                            @if ($errors->has('email'))
+                                <span class="help-block">
+                                <strong>{{ $errors->first('email') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
+                        <div class="input-field col s12 m12 l12 {{ $errors->has('password') ? 'has-error' : '' }}">
+                            <input type="password" placeholder="Senha" id="password" name="password" class="validate">
+                            @if ($errors->has('password'))
+                                <span class="help-block">
+                                <strong>{{ $errors->first('password') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+
+                        <div class="col s12 m12 l12">
+                            <a class="brown-text text-darken-1" href="{{ route('password.request') }}">
+                                Esqueceu a senha?
+                            </a>
+                        </div>
+
+                        <div class="col s12 m12 l12">
+                            <p>
+                                <input type="checkbox" id="test5" name="remember" {{ old('remember') ? 'checked' : '' }}/>
+                                <label for="test5" class="cyan-text text-accent-3">Lembrar de mim?</label>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <button class="btn waves-effect cyan darken-3 col s12 m12 l12" type="submit" name="action">Entrar
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
 
 
 

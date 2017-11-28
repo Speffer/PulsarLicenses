@@ -51,7 +51,6 @@
 
 
     <div class="row right">
-        <div class="valign-wrapper">
             <div class="col s8 m8 l8 right">
                 <h4 class="center white-text">PulsarLicenses</h4>
                 <div class="divider"></div>
@@ -91,7 +90,6 @@
                     </button>
                 </form>
             </div>
-        </div>
 
     </div>
 
