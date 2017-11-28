@@ -45,22 +45,14 @@
                 <form action="{{ route('login')}}" method="POST" class="col s10 m10 l10">
                     {{ csrf_field() }}
                     <div class="row">
-                        <div class="input-field col s12 m12 l12 {{ $errors->has('email') ? 'has-error' : '' }} ">
-                            <input type="email" placeholder="Email" id="email" name="email" class="validate">
-                            @if ($errors->has('email'))
-                                <span class="help-block">
-                                <strong>{{ $errors->first('email') }}</strong>
-                                </span>
-                            @endif
+                        <div class="input-field col s12 m12 l12">
+                            <input type="email" id="email" name="email" class="validate {{ $errors->has('email') ? 'invalid' : '' }}">
+                            <label for="email" data-error="{{ $errors->has('email') ? $errors->first('email') : 'Digite um email válido!' }}" data-success="right">Email</label>
                         </div>
 
-                        <div class="input-field col s12 m12 l12 {{ $errors->has('password') ? 'has-error' : '' }}">
-                            <input type="password" placeholder="Senha" id="password" name="password" class="validate">
-                            @if ($errors->has('password'))
-                                <span class="help-block">
-                                <strong>{{ $errors->first('password') }}</strong>
-                                </span>
-                            @endif
+                        <div class="input-field col s12 m12 l12">
+                            <input type="password" id="password" name="password" class="validate {{ $errors->has('password') ? 'invalid' : '' }}">
+                            <label for="password" data-error="{{ $errors->has('password') ? $errors->first('password') : 'A senha deve ter 6 caracteres seu boca de jundiá!' }}">Senha</label>
                         </div>
 
                         <div class="col s12 m12 l12">
