@@ -18,9 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/deslogando', 'HomeController@quitandodavida');
-
-Route::get('/teste', function(){
-    return view('testelogin');
+Route::get('/dashboard', function(){
+    return view('home');
 });
+
+//Route::get('/teste', function(){
+//    return view('testelogin');
+//});

@@ -20,7 +20,7 @@
 
     <style>
         html{
-            background-image:url(../public/assets/images/cup-of-coffee.jpg);
+            background-image:url({{ url('../public/assets/images/cup-of-coffee.jpg') }});
             background-size: cover;
         }
     </style>
