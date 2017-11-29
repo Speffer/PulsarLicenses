@@ -14,19 +14,19 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
 </head>
 <body>
     <header>
-        <!-- Dropdown Structure -->
-        <ul id="dropdown1" class="dropdown-content">
-            <li><a href="#!">one</a></li>
-            <li><a href="#!">two</a></li>
-            <li class="divider"></li>
-            <li><a href="#!">three</a></li>
-        </ul>
-        {{--light-blue darken-3--}}
-        <nav class="grey">
+        @include('layouts.menu')
+
+        <nav class="light-blue darken-3">
             <div class="nav-wrapper">
+                <ul class="left hide-on-med-and-down">
+                    <li><a href="#" data-activates="slide-out" class="collapse left"><i class="material-icons">menu</i></a></li>
+                </ul>
                 <a href="#!" class="brand-logo center">PulsarLicenses</a>
                 <ul class="right hide-on-med-and-down">
                     <!-- Dropdown Trigger -->
@@ -34,12 +34,14 @@
                 </ul>
             </div>
         </nav>
-        @include('layouts.menu')
+
     </header>
+
 
     <main>
 
         <div class="row center-align">
+
             @yield('content')
             <a class="btn btn primary" href="{{ action('HomeController@quitandodavida') }}">
                 Logout
@@ -80,15 +82,19 @@
 @yield('js-content')
 
 <script>
-    $(".dropdown-button").dropdown();
-    $(".button-collapse").sideNav({
-        menuWidth: 300, // Default is 300
-        edge: 'left', // Choose the horizontal origin
-        closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-        draggable: true, // Choose whether you can drag to open on touch screens,
+
+    $( document ).ready(function(){
+        $(".dropdown-button").dropdown();
+        $(".collapse").sideNav({
+            menuWidth: 300, // Default is 300
+            edge: 'left', // Choose the horizontal origin
+            closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+            draggable: true, // Choose whether you can drag to open on touch screens,
 //        onOpen: function(el) { /* Do Stuff* / }, // A function to be called when sideNav is opened
 //        onClose: function(el) { /* Do Stuff* / }, // A function to be called when sideNav is closed
-    });
+        });
+    })
+
 </script>
 </html>
 

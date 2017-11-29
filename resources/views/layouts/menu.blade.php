@@ -1,4 +1,4 @@
-
+    {{--SideNav Structure--}}
     <ul id="slide-out" class="side-nav">
         <li><div class="user-view">
                 <div class="background">
@@ -15,4 +15,13 @@
         <li><a class="subheader">Subheader</a></li>
         <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
     </ul>
-    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+    <!-- Dropdown Structure -->
+    <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
+
