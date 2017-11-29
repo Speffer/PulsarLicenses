@@ -25,23 +25,22 @@
         <nav class="light-blue darken-3">
             <div class="nav-wrapper">
                 <ul class="left hide-on-med-and-down">
+                    {{--SideNav Trigger--}}
                     <li><a href="#" data-activates="slide-out" class="collapse left"><i class="material-icons">menu</i></a></li>
                 </ul>
+
                 <a href="#!" class="brand-logo center">PulsarLicenses</a>
+
                 <ul class="right hide-on-med-and-down">
                     <!-- Dropdown Trigger -->
                     <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Logout?<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
             </div>
         </nav>
-
     </header>
 
-
     <main>
-
         <div class="row center-align">
-
             @yield('content')
             <a class="btn btn primary" href="{{ action('HomeController@quitandodavida') }}">
                 Logout
