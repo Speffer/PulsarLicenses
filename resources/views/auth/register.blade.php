@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PulsarLicenses Login</title>
+    <title>PulsarLicenses Cadastro</title>
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -20,74 +20,238 @@
 
     <style>
         html{
-            background-image:url({{ url('../public/assets/images/cup-of-coffee.jpg') }});
+            background-image:url({{ url('../public/assets/images/office.jpg') }});
             background-size: cover;
         }
     </style>
 </head>
 <body>
-<nav class="transparent">
-    <div class="nav-wrapper">
-        <a href="#!" class="brand-logo center"></a>
-        <ul class="left hide-on-med-and-down">
-            <li><a href="{{ route('register') }}">Cadastro</a></li>
-            <li><a href="badges.html">PP link</a></li>
-        </ul>
-    </div>
-</nav>
 
-<div class="row right">
-    <div class="col s8 m8 l8 right">
-        <h4 class="center white-text">PulsarLicenses</h4>
-        <div class="divider"></div>
+<div class="valign-wrapper" style="width:100%;height:100%;position: absolute;">
+    <div class="valign" style="width:100%;">
+        <div class="container">
+            <div class="row">
+                <div class="col s6 m6 l6 offset-l3">
+                    <div class="row" id="validation">
+                        <div class="col-12">
+                            <div class="card wizard-content">
+                                <div class="card-body">
+                                    <h4 class="card-title">Step wizard with validation</h4>
+                                    <h6 class="card-subtitle">You can us the validation like what we did</h6>
+                                    <form action="#" class="validation-wizard wizard-circle">
+                                        <!-- Step 1 -->
+                                        <h6>Step 1</h6>
+                                        <section>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wfirstName2"> First Name : <span class="danger">*</span> </label>
+                                                        <input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wlastName2"> Last Name : <span class="danger">*</span> </label>
+                                                        <input type="text" class="form-control required" id="wlastName2" name="lastName"> </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wemailAddress2"> Email Address : <span class="danger">*</span> </label>
+                                                        <input type="email" class="form-control required" id="wemailAddress2" name="emailAddress"> </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wphoneNumber2">Phone Number :</label>
+                                                        <input type="tel" class="form-control" id="wphoneNumber2"> </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wlocation2"> Select City : <span class="danger">*</span> </label>
+                                                        <select class="custom-select form-control required" id="wlocation2" name="location">
+                                                            <option value="">Select City</option>
+                                                            <option value="India">India</option>
+                                                            <option value="USA">USA</option>
+                                                            <option value="Dubai">Dubai</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wdate2">Date of Birth :</label>
+                                                        <input type="date" class="form-control" id="wdate2"> </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- Step 2 -->
+                                        <h6>Step 2</h6>
+                                        <section>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="jobTitle2">Company Name :</label>
+                                                        <input type="text" class="form-control required" id="jobTitle2">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="webUrl3">Company URL :</label>
+                                                        <input type="url" class="form-control required" id="webUrl3" name="webUrl3"> </div>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="shortDescription3">Short Description :</label>
+                                                        <textarea name="shortDescription" id="shortDescription3" rows="6" class="form-control"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- Step 3 -->
+                                        <h6>Step 3</h6>
+                                        <section>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wint1">Interview For :</label>
+                                                        <input type="text" class="form-control required" id="wint1"> </div>
+                                                    <div class="form-group">
+                                                        <label for="wintType1">Interview Type :</label>
+                                                        <select class="custom-select form-control required" id="wintType1" data-placeholder="Type to search cities" name="wintType1">
+                                                            <option value="Banquet">Normal</option>
+                                                            <option value="Fund Raiser">Difficult</option>
+                                                            <option value="Dinner Party">Hard</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="wLocation1">Location :</label>
+                                                        <select class="custom-select form-control required" id="wLocation1" name="wlocation">
+                                                            <option value="">Select City</option>
+                                                            <option value="India">India</option>
+                                                            <option value="USA">USA</option>
+                                                            <option value="Dubai">Dubai</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="wjobTitle2">Interview Date :</label>
+                                                        <input type="date" class="form-control required" id="wjobTitle2">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Requirements :</label>
+                                                        <div class="c-inputs-stacked">
+                                                            <label class="inline custom-control custom-checkbox block">
+                                                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Employee</span> </label>
+                                                            <label class="inline custom-control custom-checkbox block">
+                                                                <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Contract</span> </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>h
 
-        <div class="row">
-            <form action="{{ route('login')}}" method="POST" class="col s10 m10 l10">
-                {{ csrf_field() }}
-                <div class="row">
-                    <div class="input-field col s12 m12 l12">
-                        <input type="email" placeholder="Email" id="email" name="email" class="validate {{ $errors->has('email') ? 'has-error' : 'error' }}">
-                        @if ($errors->has('email'))
-                            <strong>{{ $errors->first('email') }}</strong>
-                        @endif
-                    </div>
+                    {{--<div id="user">--}}
+                        {{--<nav class="light-blue darken-4">--}}
+                            {{--<div class="nav-wrapper">--}}
+                                {{--<a href="#" class="brand-logo center">Dados do Usuário</a>--}}
+                            {{--</div>--}}
+                        {{--</nav>--}}
+                        {{----}}
+                    {{--</div>--}}
 
-                    <div class="input-field col s12 m12 l12">
-                        <input type="password" placeholder="Senha" id="password" name="password" class="validate {{ $errors->has('password') ? 'has-error' : 'error' }}">
-                        @if ($errors->has('password'))
-                            <strong>{{ $errors->first('password') }}</strong>
-                        @endif
-                    </div>
+                    {{--<div id="location">--}}
+                        {{--<nav class="cyan darken-3">--}}
+                            {{--<div class="nav-wrapper">--}}
+                                {{--<a href="#" class="brand-logo center">Dados da Localização</a>--}}
+                            {{--</div>--}}
+                        {{--</nav>--}}
+                    {{--</div>--}}
 
-                    <div class="col s12 m12 l12">
-                        <a class="brown-text text-darken-1" href="{{ route('password.request') }}">
-                            Esqueceu a senha?
-                        </a>
-                    </div>
+                    {{--<div id="inc">--}}
+                        {{--<nav class="indigo darken-3">--}}
+                            {{--<div class="nav-wrapper">--}}
+                                {{--<a href="#" class="brand-logo center">Dados da Empresa</a>--}}
+                            {{--</div>--}}
+                        {{--</nav>--}}
+                    {{--</div>--}}
 
-                    <div class="col s12 m12 l12">
-                        <p>
-                            <input type="checkbox" id="test5" name="remember" {{ old('remember') ? 'checked' : '' }}/>
-                            <label for="test5" class="cyan-text text-accent-3">Lembrar de mim?</label>
-                        </p>
-                    </div>
                 </div>
-
-                <div class="row">
-                    <button class="btn waves-effect cyan darken-3 col s12 m12 l12" type="submit" name="action">Entrar
-                        <i class="material-icons right">send</i>
-                    </button>
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 </body>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script src="../public/assets/wizard/step.js"></script>
+<script>
+ $(document).ready(function(){
+     $(".tab-wizard").steps({
+         headerTag: "h6"
+         , bodyTag: "section"
+         , transitionEffect: "fade"
+         , titleTemplate: '<span class="step">#index#</span> #title#'
+         , labels: {
+             finish: "Submit"
+         }
+         , onFinished: function (event, currentIndex) {
+             swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+
+         }
+     });
+
+     var form = $(".validation-wizard").show();
+
+     $(".validation-wizard").steps({
+         headerTag: "h6"
+         , bodyTag: "section"
+         , transitionEffect: "fade"
+         , titleTemplate: '<span class="step">#index#</span> #title#'
+         , labels: {
+             finish: "Submit"
+         }
+         , onStepChanging: function (event, currentIndex, newIndex) {
+             return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
+         }
+         , onFinishing: function (event, currentIndex) {
+             return form.validate().settings.ignore = ":disabled", form.valid()
+         }
+         , onFinished: function (event, currentIndex) {
+             swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
+         }
+     }), $(".validation-wizard").validate({
+         ignore: "input[type=hidden]"
+         , errorClass: "text-danger"
+         , successClass: "text-success"
+         , highlight: function (element, errorClass) {
+             $(element).removeClass(errorClass)
+         }
+         , unhighlight: function (element, errorClass) {
+             $(element).removeClass(errorClass)
+         }
+         , errorPlacement: function (error, element) {
+             error.insertAfter(element)
+         }
+         , rules: {
+             email: {
+                 email: !0
+             }
+         }
+     })
+ })
+</script>
 </html>
 
 
@@ -167,4 +331,42 @@
         {{--</div>--}}
     {{--</div>--}}
 {{--</div>--}}
+
+ {{--<form action="{{ route('login')}}" method="POST" class="col s10 m10 l10">--}}
+                {{--{{ csrf_field() }}--}}
+                {{--<div class="row">--}}
+                    {{--<div class="input-field col s12 m12 l12">--}}
+                        {{--<input type="email" placeholder="Email" id="email" name="email" class="validate {{ $errors->has('email') ? 'has-error' : 'error' }}">--}}
+                        {{--@if ($errors->has('email'))--}}
+                            {{--<strong>{{ $errors->first('email') }}</strong>--}}
+                        {{--@endif--}}
+                    {{--</div>--}}
+
+                    {{--<div class="input-field col s12 m12 l12">--}}
+                        {{--<input type="password" placeholder="Senha" id="password" name="password" class="validate {{ $errors->has('password') ? 'has-error' : 'error' }}">--}}
+                        {{--@if ($errors->has('password'))--}}
+                            {{--<strong>{{ $errors->first('password') }}</strong>--}}
+                        {{--@endif--}}
+                    {{--</div>--}}
+
+                    {{--<div class="col s12 m12 l12">--}}
+                        {{--<a class="brown-text text-darken-1" href="{{ route('password.request') }}">--}}
+                            {{--Esqueceu a senha?--}}
+                        {{--</a>--}}
+                    {{--</div>--}}
+
+                    {{--<div class="col s12 m12 l12">--}}
+                        {{--<p>--}}
+                            {{--<input type="checkbox" id="test5" name="remember" {{ old('remember') ? 'checked' : '' }}/>--}}
+                            {{--<label for="test5" class="cyan-text text-accent-3">Lembrar de mim?</label>--}}
+                        {{--</p>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="row">--}}
+                    {{--<button class="btn waves-effect cyan darken-3 col s12 m12 l12" type="submit" name="action">Entrar--}}
+                        {{--<i class="material-icons right">send</i>--}}
+                    {{--</button>--}}
+                {{--</div>--}}
+            {{--</form>--}}
 
