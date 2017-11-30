@@ -35,10 +35,14 @@
                 <div class="col s6 m6 l6 offset-l3">
                     <div class="row" id="validation">
                         <div class="col-12">
-                            <div class="card wizard-content">
-                                <div class="card-body">
+                            <div class="card wizard-content" >
+                                <div class="card-body brown lighten-5">
                                     <div class="container">
-                                        <h2 class="card-title">Cadastre-se</h2>
+                                        <div class="row">
+                                            <div class="col s12 m6 l6">
+                                                <h1 class="card-title">Cadastre-se</h1>
+                                            </div>
+                                        </div>
                                         <form action="#" class="tab-wizard wizard-circle">
                                             <!-- Step 1 -->
                                             <h6>Dados do Usuário</h6>
@@ -71,7 +75,7 @@
                                                     <div class="col s12 m6 l6">
                                                         <div class="form-group">
                                                             <label for="skype">Skype: <span class="danger">*</span> </label>
-                                                            <input type="tel" class="form-control required" id="skype">
+                                                            <input type="text" class="form-control required" id="skype">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -80,13 +84,13 @@
                                                     <div class="col s12 m6 l6">
                                                         <div class="form-group">
                                                             <label for="phone">Telefone :</label>
-                                                            <input type="tel" class="form-control" id="phone">
+                                                            <input type="number" class="form-control" id="phone">
                                                         </div>
                                                     </div>
                                                     <div class="col s12 m6 l6">
                                                         <div class="form-group">
                                                             <label for="celular">Celular: <span class="danger">*</span> </label>
-                                                            <input type="tel" class="form-control required" id="celular">
+                                                            <input type="number" class="form-control required" id="celular">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -110,67 +114,99 @@
                                             <h6>Dados de Localização</h6>
                                             <section>
                                                 <div class="row">
-                                                    <div class="col-md-6">
+                                                    <div class="col s12 m8 l8">
                                                         <div class="form-group">
-                                                            <label for="jobTitle2">Company Name :</label>
-                                                            <input type="text" class="form-control required" id="jobTitle2">
+                                                            <label for="cep"> Cep : <span class="danger">*</span> </label>
+                                                            <input type="number" class="form-control required" id="cep" name="cep">
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s12 m6 l6">
                                                         <div class="form-group">
-                                                            <label for="webUrl3">Company URL :</label>
-                                                            <input type="url" class="form-control required" id="webUrl3" name="webUrl3"> </div>
+                                                            <label for="estado">Estado :</label>
+                                                            <input type="text" class="form-control" id="estado">
+                                                        </div>
                                                     </div>
-                                                    <div class="col-md-12">
+                                                    <div class="col s12 m6 l6">
                                                         <div class="form-group">
-                                                            <label for="shortDescription3">Short Description :</label>
-                                                            <textarea name="shortDescription" id="shortDescription3" rows="6" class="form-control"></textarea>
+                                                            <label for="cidader">Cidade: <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="cidader">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s12 m8 l8">
+                                                        <div class="form-group">
+                                                            <label for="bairro"> Bairro: <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="bairro" name="bairro">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m4 l4">
+                                                        <div class="form-group">
+                                                            <label for="numero">  Número: <span class="danger">*</span> </label>
+                                                            <input type="number" class="form-control required" id="numero" name="numero">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s12 m12 l12">
+                                                        <div class="form-group">
+                                                            <label for="endereço"> Endereço: <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="endereço" name="endereço">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s12 m12 l12">
+                                                        <div class="form-group">
+                                                            <label for="complemento"> Complemento : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="complemento" name="complemento">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </section>
                                             <!-- Step 3 -->
-                                            <h6>Step 3</h6>
+                                            <h6>Dados da Empresa</h6>
                                             <section>
                                                 <div class="row">
-                                                    <div class="col-md-6">
+                                                    <div class="col s12 m12 l12">
                                                         <div class="form-group">
-                                                            <label for="wint1">Interview For :</label>
-                                                            <input type="text" class="form-control required" id="wint1"> </div>
-                                                        <div class="form-group">
-                                                            <label for="wintType1">Interview Type :</label>
-                                                            <select class="custom-select form-control required" id="wintType1" data-placeholder="Type to search cities" name="wintType1">
-                                                                <option value="Banquet">Normal</option>
-                                                                <option value="Fund Raiser">Difficult</option>
-                                                                <option value="Dinner Party">Hard</option>
-                                                            </select>
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="wLocation1">Location :</label>
-                                                            <select class="custom-select form-control required" id="wLocation1" name="wlocation">
-                                                                <option value="">Select City</option>
-                                                                <option value="India">India</option>
-                                                                <option value="USA">USA</option>
-                                                                <option value="Dubai">Dubai</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wjobTitle2">Interview Date :</label>
-                                                            <input type="date" class="form-control required" id="wjobTitle2">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label>Requirements :</label>
-                                                            <div class="c-inputs-stacked">
-                                                                <label class="inline custom-control custom-checkbox block">
-                                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Employee</span> </label>
-                                                                <label class="inline custom-control custom-checkbox block">
-                                                                    <input type="checkbox" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description ml-0">Contract</span> </label>
-                                                            </div>
+                                                            <label for="fantasia"> Nome da Empresa(Fantasia): <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="fantasia" name="fantasia">
                                                         </div>
                                                     </div>
                                                 </div>
+
+                                                <div class="row">
+                                                    <div class="col s12 m12 l12">
+                                                        <div class="form-group">
+                                                            <label for="cnpj">  CNPJ: <span class="danger">*</span> </label>
+                                                            <input type="number" class="form-control required" id="cnpj" name="cnpj">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col s12 m6 l6">
+                                                        <div class="form-group">
+                                                            <label for="juros"> Juros : <span class="danger">*</span> </label>
+                                                            <input type="number" class="form-control required" id="numero">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col s12 m6 l6">
+                                                        <div class="form-group">
+                                                            <label for="multa">Multa: <span class="danger">*</span> </label>
+                                                            <input type="number" class="form-control required" id="multa">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
                                             </section>
                                         </form>
                                     </div>
@@ -219,13 +255,20 @@
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 <script src="../public/assets/wizard/jquery.steps.min.js"></script>
+<script src="../public/assets/wizard/jquery.validate.min.js"></script>
 <script src="../public/assets/wizard/steps.js"></script>
+
 <script>
 
 </script>
 </html>
 
-
+{{--<div class="col s12 m6 l6">--}}
+    {{--<div class="form-group">--}}
+        {{--<label for="ibge">Código IBGE: <span class="danger">*</span> </label>--}}
+        {{--<input type="number" class="form-control required" id="ibge">--}}
+    {{--</div>--}}
+{{--</div>--}}
 
 
 
