@@ -14,6 +14,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../public/assets/wizard/steps.css">
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -36,28 +37,29 @@
                         <div class="col-12">
                             <div class="card wizard-content">
                                 <div class="card-body">
-                                    <h4 class="card-title">Step wizard with validation</h4>
-                                    <h6 class="card-subtitle">You can us the validation like what we did</h6>
-                                    <form action="#" class="validation-wizard wizard-circle">
+
+                                    <h4 class="card-title">Cadastre-se</h4>
+                                    <h6 class="card-subtitle">Preencha os campos corretamente</h6>
+                                    <form action="#" class="tab-wizard wizard-circle">
                                         <!-- Step 1 -->
-                                        <h6>Step 1</h6>
+                                        <h6>Dados do Usuário</h6>
                                         <section>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="wfirstName2"> First Name : <span class="danger">*</span> </label>
+                                                        <label for="wfirstName2"> Nome: <span class="danger">*</span> </label>
                                                         <input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="wlastName2"> Last Name : <span class="danger">*</span> </label>
+                                                        <label for="wlastName2"> Nome de Usuário : <span class="danger">*</span> </label>
                                                         <input type="text" class="form-control required" id="wlastName2" name="lastName"> </div>
                                                 </div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="wemailAddress2"> Email Address : <span class="danger">*</span> </label>
+                                                        <label for="wemailAddress2"> E-mail : <span class="danger">*</span> </label>
                                                         <input type="email" class="form-control required" id="wemailAddress2" name="emailAddress"> </div>
                                                 </div>
                                                 <div class="col-md-6">
@@ -155,7 +157,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>h
+                    </div>
 
                     {{--<div id="user">--}}
                         {{--<nav class="light-blue darken-4">--}}
@@ -193,64 +195,13 @@
 </body>
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
 <!-- Compiled and minified JavaScript -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-<script src="../public/assets/wizard/step.js"></script>
+<script src="../public/assets/wizard/jquery.steps.min.js"></script>
+<script src="../public/assets/wizard/steps.js"></script>
 <script>
- $(document).ready(function(){
-     $(".tab-wizard").steps({
-         headerTag: "h6"
-         , bodyTag: "section"
-         , transitionEffect: "fade"
-         , titleTemplate: '<span class="step">#index#</span> #title#'
-         , labels: {
-             finish: "Submit"
-         }
-         , onFinished: function (event, currentIndex) {
-             swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
 
-         }
-     });
-
-     var form = $(".validation-wizard").show();
-
-     $(".validation-wizard").steps({
-         headerTag: "h6"
-         , bodyTag: "section"
-         , transitionEffect: "fade"
-         , titleTemplate: '<span class="step">#index#</span> #title#'
-         , labels: {
-             finish: "Submit"
-         }
-         , onStepChanging: function (event, currentIndex, newIndex) {
-             return currentIndex > newIndex || !(3 === newIndex && Number($("#age-2").val()) < 18) && (currentIndex < newIndex && (form.find(".body:eq(" + newIndex + ") label.error").remove(), form.find(".body:eq(" + newIndex + ") .error").removeClass("error")), form.validate().settings.ignore = ":disabled,:hidden", form.valid())
-         }
-         , onFinishing: function (event, currentIndex) {
-             return form.validate().settings.ignore = ":disabled", form.valid()
-         }
-         , onFinished: function (event, currentIndex) {
-             swal("Form Submitted!", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lorem erat eleifend ex semper, lobortis purus sed.");
-         }
-     }), $(".validation-wizard").validate({
-         ignore: "input[type=hidden]"
-         , errorClass: "text-danger"
-         , successClass: "text-success"
-         , highlight: function (element, errorClass) {
-             $(element).removeClass(errorClass)
-         }
-         , unhighlight: function (element, errorClass) {
-             $(element).removeClass(errorClass)
-         }
-         , errorPlacement: function (error, element) {
-             error.insertAfter(element)
-         }
-         , rules: {
-             email: {
-                 email: !0
-             }
-         }
-     })
- })
 </script>
 </html>
 
