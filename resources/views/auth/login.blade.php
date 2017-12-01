@@ -22,6 +22,7 @@
         html{
             background-image:url({{ url('../public/assets/images/cup-of-coffee.jpg') }});
             background-size: cover;
+            background-repeat: no-repeat
         }
     </style>
 </head>

@@ -23,6 +23,7 @@
         html{
             background-image:url({{ url('../public/assets/images/office.jpg') }});
             background-size: cover;
+            background-repeat: no-repeat
         }
     </style>
 </head>
@@ -36,11 +37,11 @@
                     <div class="row" id="validation">
                         <div class="col-12">
                             <div class="card wizard-content" >
-                                <div class="card-body brown lighten-5">
+                                <div class="card-body brown lighten-5 z-depth-5">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col s12 m6 l6">
-                                                <h1 class="card-title">Cadastre-se</h1>
+                                                <h1 class="card-title blue-text text-darken-4">Cadastre-se</h1>
                                             </div>
                                         </div>
                                         <form action="#" class="tab-wizard wizard-circle">
